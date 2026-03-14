@@ -1,0 +1,57 @@
+[
+  {
+    "user_id": 1,
+    "email": "jesus1@example.com",
+    "password_hash": "$2a$06$sCqeTy0s.oaGuQEgS3VpYOEZZzw.XyZyfxAFriCp6GIFl6T0UrMSC",
+    "role": "customer",
+    "customer_id": 1,
+    "merchant_id": null,
+    "manager_id": null,
+    "tenant_id": "BankA",
+    "created_at": "2026-03-14T10:48:17.859Z"
+  },
+  {
+    "user_id": 2,
+    "email": "laurie2@example.com",
+    "password_hash": "$2a$06$4eoB1GvFttiBoHGJNNlxeORcLr1jJUltvVr.seoEHWjTfa9Sqa0eC",
+    "role": "customer",
+    "customer_id": 2,
+    "merchant_id": null,
+    "manager_id": null,
+    "tenant_id": "BankA",
+    "created_at": "2026-03-14T10:48:17.859Z"
+  },
+  {
+    "user_id": 3,
+    "email": "jennifer3@example.com",
+    "password_hash": "$2a$06$aDlW33lDX.zndLV9GGuh3uKLOf1BMW9.NKEFrorAtV4jZy5vV6gha",
+    "role": "customer",
+    "customer_id": 3,
+    "merchant_id": null,
+    "manager_id": null,
+    "tenant_id": "BankA",
+    "created_at": "2026-03-14T10:48:17.859Z"
+  },
+  {
+    "user_id": 4,
+    "email": "thomas4@example.com",
+    "password_hash": "$2a$06$QF3rXAjglU3.iLIyC78C6Opov78n.FlbFzsr6hdQ1r3mEAxZ0xSt.",
+    "role": "customer",
+    "customer_id": 4,
+    "merchant_id": null,
+    "manager_id": null,
+    "tenant_id": "BankA",
+    "created_at": "2026-03-14T10:48:17.859Z"
+  },
+  {
+    "user_id": 5,
+    "email": "james5@example.com",
+    "password_hash": "$2a$06$HYEc0x11rGph1XlAFI0zJeybuS0ejvv9cpWF910toAXSwaPdjhtO.",
+    "role": "customer",
+    "customer_id": 5,
+    "merchant_id": null,
+    "manager_id": null,
+    "tenant_id": "BankA",
+    "created_at": "2026-03-14T10:48:17.859Z"
+  }
+]

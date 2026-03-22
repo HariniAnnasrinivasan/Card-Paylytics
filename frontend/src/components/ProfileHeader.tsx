@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import api from '../api';
-import { User, MapPin, Briefcase, DollarSign } from 'lucide-react';
+import { User, MapPin, Briefcase, DollarSign, LogOut } from 'lucide-react';
 
 interface ProfileData {
     first_name: string;
@@ -12,6 +13,13 @@ interface ProfileData {
 export default function ProfileHeader() {
     const [profile, setProfile] = useState<ProfileData | null>(null);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
+
+    const handleSignOut = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('role');
+        navigate('/login');
+    };
 
     useEffect(() => {
         api.get('/customer/profile').then(res => {
@@ -38,7 +46,7 @@ export default function ProfileHeader() {
                 </div>
             </div>
 
-            <div className="flex space-x-6">
+            <div className="flex space-x-6 items-center flex-wrap gap-y-2">
                 <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
                     <MapPin size={18} className="text-gray-400" />
                     <span className="text-sm font-medium">{profile.city}</span>
@@ -50,6 +58,15 @@ export default function ProfileHeader() {
                 <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-300">
                     <DollarSign size={18} className="text-gray-400" />
                     <span className="text-sm font-medium">{profile.income_bracket}</span>
+                </div>
+                <div className="ml-auto pl-4 border-l border-gray-200 dark:border-gray-700">
+                    <button 
+                        onClick={handleSignOut}
+                        className="flex items-center space-x-2 text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 bg-red-50 hover:bg-red-100 dark:bg-red-900/20 dark:hover:bg-red-900/40 px-3 py-1.5 rounded-lg transition-colors font-semibold text-sm"
+                    >
+                        <LogOut size={16} />
+                        <span>Sign Out</span>
+                    </button>
                 </div>
             </div>
         </div>
